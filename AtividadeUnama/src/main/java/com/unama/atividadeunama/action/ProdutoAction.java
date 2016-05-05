@@ -79,6 +79,7 @@ public class ProdutoAction extends ActionSupport {
     @Action("listarTodos")
     public String listarTodos() {
         produtos = ProdutoDao.listarTodos();
+        code = 0;
         return SUCCESS;
     }
 

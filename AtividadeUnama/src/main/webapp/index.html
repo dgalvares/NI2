@@ -1,10 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="AtividadeApp">
     <head>
-        <title>Start Page</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>SiGeVe</title>
+        <link rel="stylesheet" href="content/css/bootstrap.min.css">
+        <link rel="stylesheet" href="content/css/morris.css">
+        <style type="text/css"></style>
     </head>
-    <body>
-        <h1>Hello World!</h1>
+    <body style="padding-top: 70px;">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand"  href="#/inicio">SiGeVe</a>
+                </div>
+
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav" ng-controller="MenuController">
+                        <li class="active" ng-class="{ active: isActive('/Inicio')}"><a href="#/Inicio">Home</a></li>
+                        <li ng-class="{ active: isActive('/CadastrarProduto')}"><a href="#/CadastrarProduto">Cadastrar</a></li>
+                        <!--<li ng-class="{ active: isActive('/Consultar')}"><a href="#/Consultar">Consultar</a></li>-->
+                        <!--<li ng-class="{ active: isActive('/Excluir')}"><a href="#/Excluir">Excluir</a></li>-->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div ng-view ></div>
+        </div>
+        <script src="content/js/jquery.min.js"></script>
+        <script src="content/js/bootstrap.min.js"></script>
+        <script src="content/js/angular.min.js"></script>
+        <script src="content/js/angular-route.min.js"></script>
+        <script src="layout/app.js"></script>
+        <script src="layout/MenuController.js"></script>
+
+        <script src="controllers/Inicio.js"></script>
+        <script src="controllers/CadastrarProduto.js"></script>
     </body>
 </html>
