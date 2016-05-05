@@ -15,18 +15,18 @@ AtividadeApp.config(['$routeProvider',
                     templateUrl: 'views/cadastrarProduto.html',
                     controller: 'CadastrarProduto'
                 }).
-                when('/Consultar', {
-                    templateUrl: 'views/consultar.html',
-                    controller: 'Consultar'
-                }).
-                when('/Excluir', {
-                    templateUrl: 'views/excluir.html',
-                    controller: 'Excluir'
-                }).
-                when('/Perfil', {
-                    templateUrl: 'views/Autenticar/perfil.html',
-                    controller: 'AutenticacaoPerfil'
-                }).
+//                when('/Consultar', {
+//                    templateUrl: 'views/consultar.html',
+//                    controller: 'Consultar'
+//                }).
+//                when('/Excluir', {
+//                    templateUrl: 'views/excluir.html',
+//                    controller: 'Excluir'
+//                }).
+//                when('/Perfil', {
+//                    templateUrl: 'views/Autenticar/perfil.html',
+//                    controller: 'AutenticacaoPerfil'
+//                }).
         otherwise({
             redirectTo: '/Inicio'
         });
