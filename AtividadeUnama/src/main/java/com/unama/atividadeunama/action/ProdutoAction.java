@@ -29,6 +29,7 @@ public class ProdutoAction extends ActionSupport {
     private double valor;
     private int quantidade;
     private int code;
+    private String msg;
     private List<Produto> produtos;
     /*code=0 -> no erro
      code=10 -> produto nao existe no sistema
@@ -133,6 +134,10 @@ public class ProdutoAction extends ActionSupport {
 
     public List<Produto> getProdutos() {
         return produtos;
+    }
+
+    public String getMsg() {
+        return msg;
     }
 
 }
