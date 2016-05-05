@@ -1,1 +1,47 @@
-<h1>Tela Cadastro (Teste)</h1>
+
+    <div id="main" class="container mark">
+
+        <h3 class="page-header">Adicionar Produto</h3>
+
+        <form action="/controle/fontController.php" method="POST" enctype="multipart/form-data">
+            <input type="hidden" id="classe" name="classe" value="noticia"/>
+
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label for="exampleInputEmail1">Nome</label>
+                    <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Digite o Titulo">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="exampleInputEmail1">Descrição</label>
+                    <input rows="1" type="text" class="form-control" id="descricao" name="descricao" placeholder="Digite a Descrição">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="exampleInputEmail1">Quantidade</label>
+                    <input rows="1" type="text" class="form-control" id="descricao" name="descricao" placeholder="Digite a Quantidade">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <label for="exampleInputEmail1">Preço</label>
+                    <input type="text" class="form-control" id="noticiaData" name="noticiaData" placeholder="Digite o Preço">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary">Salvar
+                        <input type="hidden" id="acao" name="acao" value="cadastrarNoticia2"/>
+                    </button>
+                    <a href="admNoticia.php" class="btn btn-default">Cancelar</a>
+                </div>
+            </div>
+
+        </form>
+    </div>
