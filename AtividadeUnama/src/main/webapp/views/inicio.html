@@ -1,3 +1,22 @@
+<div class="modal fade" id="relatorio-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalLabel">Gerar Relatorio</h4>
+            </div>
+            <div class="modal-body">
+                Deseja realmente excluir este Produto?
+            </div>
+            <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" name="del" id="del">Sim
+                    </button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">N&atilde;o</button>
+            </div>
+        </div>
+    </div>
+</div> <!-- /.modal -->
 
 
 <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
@@ -79,6 +98,8 @@
                                    href="admNoticiaEditar.php?id=<?php echo $reg['cod'] ?>">Editar</a>
                                 <a class="btn btn-danger btn-xs" href="#" data-toggle="modal"
                                    data-target="#delete-modal">Excluir</a>
+                            <a class="btn btn-primary btn-xs" href="#" data-toggle="modal"
+                                   data-target="#delete-modal">Add</a>
                             </td>
                         </tr>
                         <tr>
@@ -95,6 +116,8 @@
                                    href="admNoticiaEditar.php?id=<?php echo $reg['cod'] ?>">Editar</a>
                                 <a class="btn btn-danger btn-xs" href="#" data-toggle="modal"
                                    data-target="#delete-modal">Excluir</a>
+                                <a class="btn btn-primary btn-xs" href="#" data-toggle="modal"
+                                   data-target="#delete-modal">Add</a>
                             </td>
                         </tr>
                         <tr>
@@ -111,6 +134,8 @@
                                    href="admNoticiaEditar.php?id=<?php echo $reg['cod'] ?>">Editar</a>
                                 <a class="btn btn-danger btn-xs" href="#" data-toggle="modal"
                                    data-target="#delete-modal">Excluir</a>
+                            <a class="btn btn-primary btn-xs" href="#" data-toggle="modal"
+                                   data-target="#relatorio-modal">Add</a>
                             </td>
                         </tr>
                     </tbody>
@@ -128,6 +153,16 @@
                 <li class="disabled"><a>1</a></li>
                 <li><a href="#">2</a></li>
                 <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">8</a></li>
+                <li><a href="#">9</a></li>
+                <li><a href="#">10</a></li>
+                <li><a href="#">11</a></li>
+                <li><a href="#">12</a></li>
+
                 <li class="next"><a href="#" rel="next">Próximo &gt;</a></li>
             </ul><!-- /.pagination -->
         </div>
@@ -161,6 +196,8 @@
                 <td class="action">
                     <a class="btn btn-danger btn-xs" href="#" data-toggle="modal"
                        data-target="#delete-modal">Retirar</a>
+                    <a class="btn btn-primary btn-xs" href="#" data-toggle="modal"
+                                   data-target="#relatorio-modal">Add</a>
                 </td>
             </tr>
             <tr>
@@ -171,6 +208,8 @@
                 <td class="action">
                     <a class="btn btn-danger btn-xs" href="#" data-toggle="modal"
                        data-target="#delete-modal">Retirar</a>
+                    <a class="btn btn-primary btn-xs" href="#" data-toggle="modal"
+                                   data-target="#relatorio-modal">Add</a>
                 </td>
             </tr>
             <tr>
@@ -181,25 +220,42 @@
                 <td class="action">
                     <a class="btn btn-danger btn-xs" href="#" data-toggle="modal"
                        data-target="#delete-modal">Retirar</a>
+                    <a class="btn btn-primary btn-xs" href="#" data-toggle="modal"
+                                   data-target="#relatorio-modal">Add</a>
                 </td>
             </tr>
             </tbody>
         </table>
-    </div>
-    </form>
-
+    
     <div id="bottom" class="row">
-        <div class="col-md-12">
+        <div class="col-md-10">
 
             <ul class="pagination">
                 <li class="disabled"><a>&lt; Anterior</a></li>
                 <li class="disabled"><a>1</a></li>
                 <li><a href="#">2</a></li>
                 <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">8</a></li>
+                <li><a href="#">9</a></li>
+                <li><a href="#">10</a></li>
+                <li><a href="#">11</a></li>
+                <li><a href="#">12</a></li>
+
                 <li class="next"><a href="#" rel="next">Próximo &gt;</a></li>
             </ul><!-- /.pagination -->
         </div>
+                <div class="col-md-2">
+        <a class="btn btn-success btn-xs" href="admNoticiaView.php?id=<?php echo $reg['cod'] ?>">Limpar Carrinho</a>
+                </div>
     </div> <!-- /#bottom -->
+    </div>
+    </form>
+
+    
 </div>     
 </div>  <!-- /#main -->
 

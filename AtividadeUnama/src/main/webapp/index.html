@@ -18,6 +18,12 @@
                     <ul class="nav navbar-nav" ng-controller="MenuController">
                         <li class="active" ng-class="{ active: isActive('/Inicio')}"><a href="#/Inicio">Home</a></li>
                         <li ng-class="{ active: isActive('/CadastrarProduto')}"><a href="#/CadastrarProduto">Cadastrar</a></li>
+                        <li ng-class="{ active: isActive('/Inicio')}" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Relatório <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li ng-class="{ active: isActive('/Relatorio')}"><a data-toggle="modal" data-target="#relatorio-modal">Relatório de Estoque</a></li>
+                            <li ng-class="{ active: isActive('/Relatorio')}"><a data-toggle="modal" data-target="#relatorio-modal">Relatório de Vendas</a></li>
+                        </ul>
+                        </li>
                         <!--<li ng-class="{ active: isActive('/Consultar')}"><a href="#/Consultar">Consultar</a></li>-->
                         <!--<li ng-class="{ active: isActive('/Excluir')}"><a href="#/Excluir">Excluir</a></li>-->
                     </ul>
