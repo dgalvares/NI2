@@ -8,6 +8,9 @@ package com.unama.atividadeunama.action;
 import com.opensymphony.xwork2.ActionSupport;
 import com.unama.atividadeunama.dao.ProdutoDao;
 import com.unama.atividadeunama.model.Produto;
+import java.sql.Timestamp;
+import java.time.Instant;
+import java.util.ArrayList;
 import java.util.List;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
@@ -30,7 +33,7 @@ public class ProdutoAction extends ActionSupport {
     private int quantidade;
     private int code;
     private String msg;
-    private List<Produto> produtos;
+    private List<Produto> produtos = new ArrayList<>();
     /*code=0 -> no erro
      code=10 -> produto nao existe no sistema
      code=11 -> produto ja existe no sistema*/
@@ -39,9 +42,12 @@ public class ProdutoAction extends ActionSupport {
     public String salvar() {
         if (ProdutoDao.obterPorNome(nome) != null) {
             code = 11;
+            msg = "produto já existe no sistema";
         } else {
-            Produto produto = new Produto(nome, descricao, valor, quantidade);
+            Timestamp timestamp = Timestamp.from(Instant.now());
+            Produto produto = new Produto(nome, descricao, valor, quantidade,timestamp);
             produto.setStatus(true);
+            produto.setLastupdate(timestamp);
             ProdutoDao.salvar(produto);
             code = 0;
         }
@@ -57,6 +63,7 @@ public class ProdutoAction extends ActionSupport {
             code = 0;
         } else {
             code = 10;
+            msg = "produto não existe no sistema";
         }
         return SUCCESS;
     }
@@ -69,10 +76,12 @@ public class ProdutoAction extends ActionSupport {
             produto.setImg(img);
             produto.setQuantidade(quantidade);
             produto.setValor(valor);
+            produto.setLastupdate(Timestamp.from(Instant.now()));
             ProdutoDao.update(produto);
             code = 0;
         } else {
             code = 10;
+            msg = "produto não existe no sistema";
         }
         return SUCCESS;
     }
@@ -109,6 +118,7 @@ public class ProdutoAction extends ActionSupport {
     }
 
     public void setNome(String nome) {
+        System.out.println("executou metodo setNome");
         this.nome = nome;
     }
 

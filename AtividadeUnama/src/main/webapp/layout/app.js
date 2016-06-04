@@ -9,16 +9,16 @@ AtividadeApp.config(['$routeProvider',
         $routeProvider.
                 when('/Inicio', {
                     templateUrl: 'views/inicio.html',
-                    controller: 'Inicio'
+                    controller: 'InicioProduto'
                 }).
                 when('/CadastrarProduto', {
-                    templateUrl: 'views/cadastrarProduto.html',
+                    templateUrl: 'views/produto/cadastrarProduto.html',
                     controller: 'CadastrarProduto'
                 }).
-//                when('/Consultar', {
-//                    templateUrl: 'views/consultar.html',
-//                    controller: 'Consultar'
-//                }).
+                when('/Usuario', {
+                    templateUrl: 'views/usuario/cadastrarUsuario.html',
+                    controller: 'CadastrarUsuario'
+                }).
 //                when('/Excluir', {
 //                    templateUrl: 'views/excluir.html',
 //                    controller: 'Excluir'

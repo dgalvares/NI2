@@ -1,0 +1,56 @@
+
+    <div id="main" class="container mark">
+
+        <h3 class="page-header">Cadastrar Usuário</h3>
+
+        <form action="/controle/fontController.php" method="POST" enctype="multipart/form-data">
+            <input type="hidden" id="classe" name="classe" value="noticia"/>
+
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label>Nome</label>
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o Nome">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <label>Cpf</label>
+                    <input type="text" class="form-control" id="cpf" name="cpf" placeholder="Digite o Cpf">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label>Data de Nascimento</label>
+                    <input rows="1" type="text" class="form-control" id="dataNascimento" name="dataNascimento" placeholder="Digite a Data de Nascimento">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label>Email</label>
+                    <input rows="1" type="text" class="form-control" id="email" name="email" placeholder="Digite a Email">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <label>Senha</label>
+                    <input type="text" class="form-control" id="senha" name="senha" placeholder="Digite a Senha">
+                </div>
+            </div>
+            <hr />
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary">Salvar
+                        <input type="hidden" id="acao" name="acao" value="cadastrarNoticia2"/>
+                    </button>
+                    <a href="admNoticia.php" class="btn btn-default">Cancelar</a>
+                </div>
+            </div>
+
+        </form>
+    </div>
