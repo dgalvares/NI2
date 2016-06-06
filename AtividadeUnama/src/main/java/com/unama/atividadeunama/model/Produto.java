@@ -5,6 +5,7 @@
  */
 package com.unama.atividadeunama.model;
 
+import java.sql.Timestamp;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -32,24 +33,30 @@ public class Produto {
     private boolean status;
 
     private int quantidade;
+    
+    private Timestamp datacad;
+    
+    private Timestamp lastupdate;
 
     public Produto() {
 
     }
 
-    public Produto(String nome, String descricao, double valor, int quantidade) {
+    public Produto(String nome, String descricao, double valor, int quantidade, Timestamp datacad) {
         this.nome = nome;
         this.descricao = descricao;
         this.valor = valor;
         this.quantidade = quantidade;
+        this.datacad = datacad;
     }
 
-    public Produto(String nome, String descricao, double valor, int quantidade, String img) {
+    public Produto(String nome, String descricao, double valor, int quantidade, Timestamp datacad, String img) {
         this.nome = nome;
         this.descricao = descricao;
         this.img = img;
         this.valor = valor;
         this.quantidade = quantidade;
+        this.datacad = datacad;
     }
 
     public long getId() {
@@ -106,6 +113,22 @@ public class Produto {
 
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
+    }
+
+    public Timestamp getDatacad() {
+        return datacad;
+    }
+
+    public void setDatacad(Timestamp datacad) {
+        this.datacad = datacad;
+    }
+
+    public Timestamp getLastupdate() {
+        return lastupdate;
+    }
+
+    public void setLastupdate(Timestamp lastupdate) {
+        this.lastupdate = lastupdate;
     }
 
 }

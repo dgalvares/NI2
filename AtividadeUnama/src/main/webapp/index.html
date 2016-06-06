@@ -34,7 +34,8 @@
 
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav" ng-controller="MenuController">
-                        <li class="active" ng-class="{ active: isActive('/Inicio')}"><a href="#/Inicio">Home</a></li>
+                        <li ng-class="{ active: isActive('/Usuario')}"><a href="#/Usuario">Usuario</a></li>
+                        <li ng-class="{ active: isActive('/Inicio')}"><a href="#/Inicio">Home</a></li>
                         <li ng-class="{ active: isActive('/CadastrarProduto')}"><a href="#/CadastrarProduto">Cadastrar</a></li>
                         <li ng-class="{ active: isActive('/Inicio')}" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Relatório <span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -60,7 +61,7 @@
         <script src="layout/app.js"></script>
         <script src="layout/MenuController.js"></script>
 
-        <script src="controllers/Inicio.js"></script>
-        <script src="controllers/CadastrarProduto.js"></script>
+        <script src="controllers/produto/InicioProduto.js"></script>
+        <script src="controllers/produto/CadastrarProduto.js"></script>
     </body>
 </html>

@@ -2,12 +2,11 @@
 <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
   <session-factory>
-<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/unamani2</property>
-    <property name="hibernate.connection.username">unama</property>
-    <property name="hibernate.connection.password">unama</property>
-	<property name="hibernate.hbm2ddl.auto">update</property>
-	<mapping class="com.unama.atividadeunama.model.Produto"/>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <mapping class="com.unama.atividadeunama.model.Produto"/>
   </session-factory>
 </hibernate-configuration>
