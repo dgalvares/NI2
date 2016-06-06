@@ -1,0 +1,110 @@
+<div id="main" class="container mark">
+    <div id="top" class="row">
+
+        <div class="col-md-3">
+            <h2>Buscar Logs</h2>
+        </div>
+    </div>
+    <div class="row">
+
+        <form>
+            <div class="col-md-3">
+                <div class="input-group h2">
+                    <select class="selectpicker" id="usuarios" name="usuarios">
+                        <option>Todos Usuarios</option>
+                        <option>Raphael</option>
+                        <option>Rafael Costa</option>
+                        <option>Shalon</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group h2">
+                    <input name="dataInicial" class="form-control" id="data" type="text" placeholder="Data Inicial">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group h2">
+                    <input name="dataFinal" class="form-control" id="dataf" type="text" placeholder="Data Final">
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="input-group h2">
+                    <input name="search" class="form-control" id="search" type="text" placeholder="Pesquisar Noticias">
+            <span class="input-group-btn">
+                <button class="btn btn-primary" type="submit">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </span>
+                </div>
+            </div>
+
+
+    </div> <!-- /#top -->
+    <hr/>
+    <div id="list" class="row">
+        <div>
+            <div class="table-responsive col-md-12">
+                <h2>Lista de Logs do Sistema</h2>
+                <table id="tabelanoticias" class="table table-striped" cellspacing="0" cellpadding="0">
+                    <thead>
+                    <tr style="background-color: firebrick">
+                        <th> #</th>
+                        <th> Data</th>
+                        <th> Descricao</th>
+                        <th> Usuario</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>06/06/2016 - 16:46:36</td>
+                        <td>Produto Inserido PS4</td>
+                        <td>Gregg</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>04/06/2016 - 21:46:36</td>
+                        <td>Produto Inserido Pepino</td>
+                        <td>Rafael Costa</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>03/06/2016 - 19:46:36</td>
+                        <td>Produto Inserido Nabu</td>
+                        <td>Shalon</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>02/06/2016 - 17:46:36</td>
+                        <td>Produto Inserido Calabresa</td>
+                        <td>Rafael Costa</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>01/06/2016 - 12:46:36</td>
+                        <td>Produto Inserido Banana</td>
+                        <td>Douglas</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            </form>
+        </div> <!-- fim da tabela -->
+    </div> <!-- /#list -->
+
+    <div id="bottom" class="row">
+        <div class="col-md-12">
+
+            <ul class="pagination">
+                <li class="disabled"><a>&lt; Anterior</a></li>
+                <li class="disabled"><a>1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li class="next"><a href="#" rel="next">Próximo &gt;</a></li>
+            </ul><!-- /.pagination -->
+        </div>
+    </div> <!-- /#bottom -->
+
+</div>  <!-- /#main -->
+</div><!-- fim do container -->
