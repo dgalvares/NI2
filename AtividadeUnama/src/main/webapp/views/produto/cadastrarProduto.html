@@ -1,0 +1,45 @@
+
+<div id="main" class="container mark">
+
+    <h3 class="page-header">Adicionar Produto</h3>
+
+    <form ng-submit="cadastrar()">
+
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label>Nome</label>
+                <input required type="text" class="form-control" id="nome" name="nome" ng-model="produto.nome" placeholder="Nome do produto">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-2">
+                <label>Quantidade</label>
+                <input required rows="1" type="number" class="form-control" id="quantidade" name="quantidade" ng-model="produto.quantidade" placeholder="Quantidade">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-2">
+                <label>Preço</label>
+                <input required type="text" class="form-control" id="valor" name="valor" ng-model="produto.valor" placeholder="Preço">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label>Descrição</label>
+                <input required rows="1" type="text" class="form-control" id="descricao" name="descricao" ng-model="produto.descricao" placeholder="Descrição do produto">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary">Salvar
+                </button>
+                <a class="btn btn-default">Cancelar</a>
+            </div>
+        </div>
+
+    </form>
+</div>

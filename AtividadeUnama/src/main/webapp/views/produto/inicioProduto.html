@@ -1,0 +1,159 @@
+
+
+<div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalLabel">Excluir Noticia</h4>
+            </div>
+            <div class="modal-body">
+                Deseja realmente excluir este Produto?
+            </div>
+            <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" name="del" id="del">Sim
+                    </button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">N&atilde;o</button>
+            </div>
+        </div>
+    </div>
+</div> <!-- /.modal -->
+
+<div id="main" class="container mark">
+    <div id="top" class="row">
+
+        <div class="col-md-3">
+            <h2>Buscar Produtos</h2>
+        </div>
+        <form>
+
+            <div class="col-md-6">
+                <div class="input-group h2">
+                    <input name="search" class="form-control" id="search" type="text" placeholder="Pesquisar Noticias">
+            <span class="input-group-btn">
+                <button class="btn btn-primary" type="submit">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </span>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <a href="#/CadastrarProduto" class="btn btn-primary pull-right h2">Novo Produto</a>
+
+            </div>
+
+
+    </div> <!-- /#top -->
+    <hr/>
+    <div id="list" class="row">
+        <div>
+            <div class="table-responsive col-md-12">
+                <h2>Lista de Produtos</h2>
+                <table id="tabelanoticias" class="table table-striped" cellspacing="0" cellpadding="0">
+                    <thead>
+                    <tr style="background-color: firebrick">
+
+                        <th> Cod</th>
+                        <th> Nome</th>
+                        <th> Descricao</th>
+                        <th> Preço</th>
+                        <th> Quantidade</th>
+                        <th class="actions"> Ação</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Produto 1</td>
+                            <td>Descrição do produto 1</td>
+                            <td>R$ 100,00</td>
+                            <td> 10</td>
+                            <td class="action">
+
+                                <a class="btn btn-success btn-xs"
+                                   href="admNoticiaView.php?id=<?php echo $reg['cod'] ?>">Visualizar</a>
+                                <a class="btn btn-warning btn-xs"
+                                   href="admNoticiaEditar.php?id=<?php echo $reg['cod'] ?>">Editar</a>
+                                <a class="btn btn-danger btn-xs" href="#" data-toggle="modal"
+                                   data-target="#delete-modal">Excluir</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Produto 2</td>
+                            <td>Descrição do produto 2</td>
+                            <td>R$ 200,00</td>
+                            <td> 20</td>
+                            <td class="action">
+
+                                <a class="btn btn-success btn-xs"
+                                   href="admNoticiaView.php?id=<?php echo $reg['cod'] ?>">Visualizar</a>
+                                <a class="btn btn-warning btn-xs"
+                                   href="admNoticiaEditar.php?id=<?php echo $reg['cod'] ?>">Editar</a>
+                                <a class="btn btn-danger btn-xs" href="#" data-toggle="modal"
+                                   data-target="#delete-modal">Excluir</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Produto 3</td>
+                            <td>Descrição do produto 3</td>
+                            <td>R$ 300,00</td>
+                            <td> 30</td>
+                            <td class="action">
+
+                                <a class="btn btn-success btn-xs"
+                                   href="admNoticiaView.php?id=<?php echo $reg['cod'] ?>">Visualizar</a>
+                                <a class="btn btn-warning btn-xs"
+                                   href="admNoticiaEditar.php?id=<?php echo $reg['cod'] ?>">Editar</a>
+                                <a class="btn btn-danger btn-xs" href="#" data-toggle="modal"
+                                   data-target="#delete-modal">Excluir</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div> <!-- fim da tabela -->
+    </div> <!-- /#list -->
+
+    <div id="bottom" class="row">
+        <div class="col-md-12">
+
+            <ul class="pagination">
+                <li class="disabled"><a>&lt; Anterior</a></li>
+                <li class="disabled"><a>1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li class="next"><a href="#" rel="next">Próximo &gt;</a></li>
+            </ul><!-- /.pagination -->
+        </div>
+    </div> <!-- /#bottom -->
+
+</div>  <!-- /#main -->
+
+<h1>Produtos</h1>
+<table class="table table-striped table-bordered" id="listaProdutos" >
+    <thead>
+        <tr style="cursor: pointer;">
+            <th ng-click="$order = 'id'">ID</th>
+            <th ng-click="$order = 'nome'">Nome</th>
+            <th ng-click="$order = 'usuario'">Valor</th>
+            <th ng-click="$order = 'quantidade'">Quantidade</th>
+            <th ng-click="$order = 'datacad'">Data de Cadastro</th>
+            <th ng-click="$order = 'lastupdate'">Data da ultima atualização</th>
+        </tr>
+    </thead>
+    <tbody>   
+        <tr ng-repeat="produto in produtos| orderBy : $order" style="cursor: pointer;">
+            <td>{{produto.id}}</td>
+            <td>{{ produto.nome}}</td>
+            <td>{{produto.valor}}</td>
+            <td>{{produto.quantidade}}</td>
+            <td>{{produto.datacad}}</td>
+            <td>{{produto.lastupdate}}</td>
+        </tr>
+    </tbody>
+</table>
