@@ -15,9 +15,13 @@ AtividadeApp.config(['$routeProvider',
                     templateUrl: 'views/produto/cadastrarProduto.html',
                     controller: 'CadastrarProduto'
                 }).
-                when('/Usuario', {
-                    templateUrl: 'views/usuario/cadastrarUsuario.html',
+                when('/CadastrarUsuario', {
+                    templateUrl: 'views/usuario/cadastrarUsuaio.html',
                     controller: 'CadastrarUsuario'
+                }).
+                when('/Log', {
+                    templateUrl: 'views/log/Log.html',
+                    controller: ''
                 }).
 //                when('/Excluir', {
 //                    templateUrl: 'views/excluir.html',

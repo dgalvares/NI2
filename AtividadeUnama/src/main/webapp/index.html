@@ -34,10 +34,14 @@
 
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav" ng-controller="MenuController">
-                        <li ng-class="{ active: isActive('/Usuario')}"><a href="#/Usuario">Usuario</a></li>
                         <li ng-class="{ active: isActive('/Inicio')}"><a href="#/Inicio">Home</a></li>
-                        <li ng-class="{ active: isActive('/CadastrarProduto')}"><a href="#/CadastrarProduto">Cadastrar</a></li>
-                        <li ng-class="{ active: isActive('/Inicio')}" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Relatório <span class="caret"></span></a>
+                        <li ng-class="{ active: isActive('/Cadastrar')}" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Cadastrar<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li ng-class="{ active: isActive('/CadastrarProduto')}"><a href="#/produto/CadastrarProduto">Cadastrar Produto</a></li>
+                            <li ng-class="{ active: isActive('/CadastrarUsuario')}"><a href="#/usuario/CadastrarUsuario">Cadastrar Usuario</a></li>
+                        </ul>
+                        </li>
+                        <li ng-class="{ active: isActive('/Relatorio')}" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Relatório <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li ng-class="{ active: isActive('/Relatorio')}"><a data-toggle="modal" data-target="#relatorio-modal">Relatório de Estoque</a></li>
                             <li ng-class="{ active: isActive('/Relatorio')}"><a data-toggle="modal" data-target="#relatorio-modal">Relatório de Vendas</a></li>
